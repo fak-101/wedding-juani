@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="J & T - ¡Nos casamos! Celebra con nosotros este momento especial.">
+    <meta name="description" content="J & T - ¡Nos casamos! Celebra con nosotros este momento especial el 11 de abril de 2026.">
     <meta name="author" content="J & T">
 
     <!-- Open Graph para compartir en redes sociales -->
     <meta property="og:title" content="J & T - ¡Nos casamos!">
-    <meta property="og:description" content="Celebra con nosotros este momento especial.">
+    <meta property="og:description" content="Celebra con nosotros este momento especial el 11 de abril de 2026.">
+    <meta property="og:image" content="assets/logo.svg">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
 
     <title>J & T - ¡Nos casamos!</title>
 
@@ -31,7 +33,7 @@
         <div class="content-wrapper">
             <!-- Logo -->
             <div class="logo-container">
-                <img src="assets/logo.svg" alt="Logo J & T" class="logo">
+                <img src="assets/logo.svg" alt="Logo de boda de Juani y Tami" class="logo" width="280" height="auto">
             </div>
 
             <!-- Texto principal -->
@@ -126,7 +128,7 @@
             </div>
 
             <!-- Mensaje final -->
-            <p class="date-message">¡Nada nos hará más felices que verte ahí.!</p>
+            <p class="date-message">¡Nada nos hará más felices que verte ahí!</p>
         </div>
     </section>
 
@@ -200,7 +202,7 @@
             <p class="dresscode-description">
                 ¡Elegí algo <em>dentro de tu propio estilo</em>,<br>
                 que te haga sentir increíble<br>
-                y listo/a para bailar toda la noche.!
+                y listo/a para bailar toda la noche!
             </p>
 
             <!-- Nota sobre colores -->
@@ -247,11 +249,17 @@
 
             <!-- Contenedor colapsable del formulario -->
             <div class="rsvp-form-container" id="formContainer">
+                <div class="iframe-loading" id="iframeLoading">
+                    <p>Cargando formulario...</p>
+                </div>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd86tut-l8mozwv-6UjAHh8M6-izyoCfo3zQSCWk9D5ftoasw/viewform?embedded=true"
                         class="rsvp-form"
+                        id="rsvpIframe"
                         frameborder="0"
                         marginheight="0"
-                        marginwidth="0">
+                        marginwidth="0"
+                        title="Formulario de confirmación de asistencia"
+                        loading="lazy">
                     Cargando…
                 </iframe>
             </div>
@@ -408,14 +416,28 @@
             </div>
 
             <!-- Descripción -->
-            <p class="playlist-description">Sugerí tu tema infaltable:</p>
+            <p class="playlist-description">Sugerí tu tema infaltable para nuestra fiesta:</p>
 
-            <!-- Botón -->
+            <!-- Spotify Embed -->
+            <div class="spotify-embed-container">
+                <iframe style="border-radius: 12px"
+                    src="https://open.spotify.com/embed/playlist/5ngeFZvkIID0YBPc9VAw8q?utm_source=generator&theme=0"
+                    width="100%"
+                    height="380"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Playlist de boda Juani & Tami">
+                </iframe>
+            </div>
+
+            <!-- Botón para abrir en Spotify -->
             <a href="https://open.spotify.com/playlist/5ngeFZvkIID0YBPc9VAw8q?si=1-Fmv8VBS7iENxvP5eU0-Q&pi=FF5a7yG6QZWnu"
                target="_blank"
                rel="noopener noreferrer"
                class="playlist-button">
-                Recomendar canción
+                Abrir en Spotify
             </a>
         </div>
     </section>

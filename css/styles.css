@@ -4,9 +4,9 @@
 :root {
     /* Colores - Temática Bosque Verde Eucalipto */
     --color-eucalyptus-primary: #8b9477;
-    --color-eucalyptus-secondary: #8b9477;
-    --color-eucalyptus-dark: #8b9477;
-    --color-eucalyptus-light: #8b9477;
+    --color-eucalyptus-secondary: #6d7a5e;
+    --color-eucalyptus-dark: #5a6549;
+    --color-eucalyptus-light: #9ba886;
     --color-background: #F5F2ED;
     --color-background-alt: #FAF8F5;
     --color-white: #FFFFFF;
@@ -14,6 +14,16 @@
     /* Tipografía */
     --font-cursive: 'Parisienne', cursive;
     --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Professional Typography Scale (8 sizes) */
+    --text-xs: 0.75rem;      /* 12px - Small labels, fine print */
+    --text-sm: 0.875rem;     /* 14px - Secondary text, captions */
+    --text-base: 1rem;       /* 16px - Body text, descriptions */
+    --text-lg: 1.125rem;     /* 18px - Emphasized body text */
+    --text-xl: 1.5rem;       /* 24px - Section subtitles */
+    --text-2xl: 2rem;        /* 32px - Medium headings */
+    --text-3xl: 3rem;        /* 48px - Large headings */
+    --text-4xl: 4rem;        /* 64px - Hero text, display */
 
     /* Tamaños */
     --decoration-size: 200px;
@@ -174,7 +184,7 @@ body {
 
 .countdown-title {
     font-family: var(--font-cursive);
-    font-size: 3.5rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -185,7 +195,7 @@ body {
 
 .countdown-subtitle {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.4;
@@ -221,7 +231,7 @@ body {
 
 .countdown-number {
     font-family: var(--font-sans);
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     font-weight: 500;
     color: var(--color-eucalyptus-primary);
     line-height: 1;
@@ -229,7 +239,7 @@ body {
 
 .countdown-label {
     font-family: var(--font-sans);
-    font-size: 0.7rem;
+    font-size: var(--text-xs);
     font-weight: 400;
     color: var(--color-eucalyptus-secondary);
     text-transform: uppercase;
@@ -286,7 +296,7 @@ body {
    ========================================== */
 .main-text {
     font-family: var(--font-cursive);
-    font-size: 4rem;
+    font-size: var(--text-4xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.2;
@@ -391,7 +401,7 @@ body {
 
 .date-title {
     font-family: var(--font-cursive);
-    font-size: 2.5rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -402,7 +412,7 @@ body {
 
 .date-description {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.4;
@@ -415,7 +425,7 @@ body {
 
 .date-large {
     font-family: var(--font-sans);
-    font-size: 2.75rem;
+    font-size: var(--text-3xl);
     font-weight: 300;
     color: var(--color-eucalyptus-dark);
     line-height: 1;
@@ -425,7 +435,7 @@ body {
 
 .date-year {
     font-family: var(--font-sans);
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     font-weight: 300;
     color: var(--color-eucalyptus-dark);
     line-height: 1.1;
@@ -435,7 +445,7 @@ body {
 
 .date-message {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     font-style: italic;
     color: var(--color-eucalyptus-secondary);
@@ -483,7 +493,7 @@ body {
 
 .location-title {
     font-family: var(--font-cursive);
-    font-size: 2.5rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -502,7 +512,7 @@ body {
 
 .location-time {
     font-family: var(--font-sans);
-    font-size: 1.15rem;
+    font-size: var(--text-lg);
     font-weight: 400;
     color: var(--color-eucalyptus-dark);
     margin: 0.25rem 0;
@@ -510,7 +520,7 @@ body {
 
 .location-venue {
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
     font-weight: 300;
     color: var(--color-eucalyptus-dark);
     letter-spacing: 0.05em;
@@ -519,7 +529,7 @@ body {
 
 .location-address {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     font-weight: 300;
     font-style: italic;
     color: var(--color-eucalyptus-secondary);
@@ -533,7 +543,7 @@ body {
     background-color: var(--color-eucalyptus-primary);
     color: var(--color-white);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     font-weight: 400;
     text-decoration: none;
     border-radius: 8px;
@@ -555,7 +565,7 @@ body {
 
 .location-note {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     font-weight: 300;
     font-style: italic;
     color: var(--color-eucalyptus-secondary);
@@ -603,7 +613,7 @@ body {
 
 .dresscode-title {
     font-family: var(--font-sans);
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     font-weight: 300;
     color: #8B9477;
     line-height: 1.1;
@@ -622,7 +632,7 @@ body {
 
 .dresscode-subtitle {
     font-family: var(--font-cursive);
-    font-size: 2.75rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -633,7 +643,7 @@ body {
 
 .dresscode-description {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.5;
@@ -647,7 +657,7 @@ body {
 
 .dresscode-note {
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.4;
@@ -706,7 +716,7 @@ body {
 
 .rsvp-title {
     font-family: var(--font-cursive);
-    font-size: 2.75rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -725,7 +735,7 @@ body {
 
 .rsvp-phrase {
     font-family: var(--font-sans);
-    font-size: 1.05rem;
+    font-size: var(--text-lg);
     font-weight: 300;
     font-style: italic;
     color: var(--color-eucalyptus-dark);
@@ -735,7 +745,7 @@ body {
 
 .rsvp-description {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.4;
@@ -748,7 +758,7 @@ body {
     background-color: var(--color-eucalyptus-primary);
     color: var(--color-white);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     font-weight: 400;
     text-decoration: none;
     border: none;
@@ -780,10 +790,33 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     width: 100%;
+    position: relative;
 }
 
 .rsvp-form-container.active {
     max-height: 850px;
+}
+
+.iframe-loading {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-eucalyptus-dark);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+}
+
+.rsvp-form-container.active .iframe-loading {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.rsvp-form-container.active .rsvp-form.loaded ~ .iframe-loading {
+    display: none;
 }
 
 .rsvp-form {
@@ -795,11 +828,17 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(139, 148, 119, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.rsvp-form.loaded {
+    opacity: 1;
 }
 
 .rsvp-note {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     font-weight: 300;
     color: var(--color-eucalyptus-secondary);
     line-height: 1.4;
@@ -847,7 +886,7 @@ body {
 
 .info-title {
     font-family: var(--font-cursive);
-    font-size: 3rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: rgba(250, 248, 245, 0.7);
     line-height: 1.1;
@@ -920,7 +959,7 @@ body {
 
 .info-button-label {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     font-weight: 300;
     color: rgba(250, 248, 245, 0.7);
     letter-spacing: 0.08em;
@@ -955,7 +994,7 @@ body {
 
 .emergency-fund-title {
     font-family: var(--font-cursive);
-    font-size: 2.75rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -974,7 +1013,7 @@ body {
 
 .emergency-fund-description {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-dark);
     line-height: 1.4;
@@ -1006,7 +1045,7 @@ body {
 
 .alias-text {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 400;
     color: var(--color-white);
     margin: 0;
@@ -1054,7 +1093,7 @@ body {
 
 .playlist-title {
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
     font-weight: 300;
     color: #8B9477;
     line-height: 1.1;
@@ -1064,7 +1103,7 @@ body {
 
 .playlist-subtitle {
     font-family: var(--font-cursive);
-    font-size: 3rem;
+    font-size: var(--text-3xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.1;
@@ -1087,11 +1126,29 @@ body {
 
 .playlist-description {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 300;
     color: var(--color-eucalyptus-dark);
     line-height: 1.4;
-    margin: 0.5rem 0 0.75rem 0;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.spotify-embed-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.spotify-embed-container iframe {
+    box-shadow: 0 4px 16px rgba(139, 148, 119, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-embed-container iframe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 148, 119, 0.3);
 }
 
 .playlist-button {
@@ -1100,7 +1157,7 @@ body {
     background-color: var(--color-eucalyptus-primary);
     color: var(--color-white);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: var(--text-base);
     font-weight: 400;
     text-decoration: none;
     border-radius: 50px;
@@ -1109,6 +1166,7 @@ body {
     letter-spacing: 0.03em;
     border: none;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .playlist-button:hover {
@@ -1166,7 +1224,7 @@ body {
 
 .wedshoots-text {
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
     font-weight: 300;
     color: #8B9477;
     line-height: 1.4;
@@ -1176,7 +1234,7 @@ body {
 
 .wedshoots-title {
     font-family: var(--font-cursive);
-    font-size: 4.5rem;
+    font-size: var(--text-4xl);
     font-weight: 400;
     color: #8B9477;
     line-height: 1.2;
@@ -1207,7 +1265,7 @@ body {
 
 .wedshoots-download {
     font-family: var(--font-sans);
-    font-size: 1.2rem;
+    font-size: var(--text-lg);
     font-weight: 400;
     color: #8B9477;
     margin: 1rem 0 0.5rem 0;
@@ -1216,7 +1274,7 @@ body {
 
 .wedshoots-code {
     font-family: var(--font-sans);
-    font-size: 1.1rem;
+    font-size: var(--text-lg);
     font-weight: 300;
     color: #8B9477;
     margin: 0;
@@ -1233,98 +1291,24 @@ body {
         --decoration-size: 150px;
         --logo-size: 220px;
         --button-size: 70px;
-    }
 
-    .countdown-title {
-        font-size: 4rem;
-    }
-
-    .countdown-subtitle {
-        font-size: 1.1rem;
+        /* Responsive Typography - Tablet */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.5rem;
+        --text-2xl: 2rem;
+        --text-3xl: 3rem;
+        --text-4xl: 3.5rem;
     }
 
     .countdown-timer {
         gap: 1.5rem;
     }
 
-    .countdown-number {
-        font-size: 2.5rem;
-    }
-
-    .date-title {
-        font-size: 3rem;
-    }
-
-    .date-description {
-        font-size: 1.1rem;
-    }
-
-    .date-large {
-        font-size: 3.5rem;
-    }
-
-    .date-year {
-        font-size: 2.5rem;
-    }
-
-    .date-message {
-        font-size: 1.1rem;
-    }
-
-    .location-title {
-        font-size: 3rem;
-    }
-
-    .location-venue {
-        font-size: 1.75rem;
-    }
-
-    .location-time {
-        font-size: 1.35rem;
-    }
-
-    .location-address {
-        font-size: 1rem;
-    }
-
-    .dresscode-title {
-        font-size: 2.5rem;
-    }
-
-    .dresscode-subtitle {
-        font-size: 3.5rem;
-    }
-
-    .dresscode-description {
-        font-size: 1.15rem;
-    }
-
-    .dresscode-note {
-        font-size: 1rem;
-    }
-
-    .rsvp-title {
-        font-size: 3.5rem;
-    }
-
-    .rsvp-phrase {
-        font-size: 1.2rem;
-    }
-
-    .rsvp-description {
-        font-size: 1.05rem;
-    }
-
-    .main-text {
-        font-size: 3.5rem;
-    }
-
     .content-wrapper {
         gap: 2rem;
-    }
-
-    .info-title {
-        font-size: 3.5rem;
     }
 
     .info-buttons {
@@ -1341,57 +1325,12 @@ body {
         height: 45px;
     }
 
-    .info-button-label {
-        font-size: 1rem;
-    }
-
-    .emergency-fund-title {
-        font-size: 3.5rem;
-    }
-
-    .emergency-fund-description {
-        font-size: 1.15rem;
-    }
-
-    .alias-text {
-        font-size: 1.1rem;
-    }
-
-    .playlist-title {
-        font-size: 1.75rem;
-    }
-
-    .playlist-subtitle {
-        font-size: 3.5rem;
-    }
-
-    .playlist-description {
-        font-size: 1.15rem;
-    }
-
     .playlist-button {
-        font-size: 1.05rem;
         padding: 0.7rem 2.25rem;
-    }
-
-    .wedshoots-text {
-        font-size: 1.3rem;
-    }
-
-    .wedshoots-title {
-        font-size: 3.5rem;
     }
 
     .wedshoots-logo {
         width: 100px;
-    }
-
-    .wedshoots-download {
-        font-size: 1.1rem;
-    }
-
-    .wedshoots-code {
-        font-size: 1rem;
     }
 }
 
@@ -1401,6 +1340,16 @@ body {
         --decoration-size: 120px;
         --logo-size: 180px;
         --button-size: 60px;
+
+        /* Responsive Typography - Mobile */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.5rem;
+        --text-2xl: 2rem;
+        --text-3xl: 2.75rem;
+        --text-4xl: 3rem;
     }
 
     .section-card {
@@ -1712,6 +1661,16 @@ body {
         --decoration-size: 100px;
         --logo-size: 150px;
         --button-size: 55px;
+
+        /* Responsive Typography - Small Mobile */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.5rem;
+        --text-2xl: 1.75rem;
+        --text-3xl: 2.5rem;
+        --text-4xl: 2.5rem;
     }
 
     .section-card {
@@ -1963,6 +1922,16 @@ body {
         --decoration-size: 250px;
         --logo-size: 320px;
         --button-size: 90px;
+
+        /* Responsive Typography - Large Desktop */
+        --text-xs: 0.875rem;
+        --text-sm: 1rem;
+        --text-base: 1.125rem;
+        --text-lg: 1.25rem;
+        --text-xl: 1.75rem;
+        --text-2xl: 2.5rem;
+        --text-3xl: 4rem;
+        --text-4xl: 5rem;
     }
 
     .section-card {

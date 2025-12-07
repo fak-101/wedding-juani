@@ -192,110 +192,34 @@ class CountdownTimer {
 // ==========================================
 
 // ==========================================
-// Scroll Arrow
+// Scroll Arrow (Future feature - currently inactive)
 // ==========================================
 
 function initScrollArrow() {
-    const scrollArrow = document.getElementById('scrollArrow');
-    const scrollArrow2 = document.getElementById('scrollArrow2');
-    const scrollArrow3 = document.getElementById('scrollArrow3');
-    const scrollArrow4 = document.getElementById('scrollArrow4');
-    const scrollArrow5 = document.getElementById('scrollArrow5');
-    const scrollArrow6 = document.getElementById('scrollArrow6');
-    const scrollArrow7 = document.getElementById('scrollArrow7');
-    const scrollArrow8 = document.getElementById('scrollArrow8');
-    const scrollArrow9 = document.getElementById('scrollArrow9');
-    const countdownSection = document.querySelector('.countdown-section');
-    const dateSection = document.querySelector('.date-section');
-    const locationSection = document.querySelector('.location-section');
-    const dresscodeSection = document.querySelector('.dresscode-section');
-    const rsvpSection = document.querySelector('.rsvp-section');
-    const infoSection = document.querySelector('.info-section');
-    const emergencyFundSection = document.querySelector('.emergency-fund-section');
-    const playlistSection = document.querySelector('.playlist-section');
-    const wedshootsSection = document.querySelector('.wedshoots-section');
+    // This function is prepared for future scroll arrow elements
+    // Add scroll arrows to HTML with IDs like 'scrollArrow' to enable
+    const scrollArrows = document.querySelectorAll('[id^="scrollArrow"]');
 
-    if (scrollArrow && countdownSection) {
-        scrollArrow.addEventListener('click', () => {
-            countdownSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
+    if (scrollArrows.length === 0) {
+        // No scroll arrows found - feature not yet implemented in HTML
+        return;
     }
 
-    if (scrollArrow2 && dateSection) {
-        scrollArrow2.addEventListener('click', () => {
-            dateSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow3 && locationSection) {
-        scrollArrow3.addEventListener('click', () => {
-            locationSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow4 && dresscodeSection) {
-        scrollArrow4.addEventListener('click', () => {
-            dresscodeSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow5 && infoSection) {
-        scrollArrow5.addEventListener('click', () => {
-            infoSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow6 && emergencyFundSection) {
-        scrollArrow6.addEventListener('click', () => {
-            emergencyFundSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow7 && playlistSection) {
-        scrollArrow7.addEventListener('click', () => {
-            playlistSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow8 && wedshootsSection) {
-        scrollArrow8.addEventListener('click', () => {
-            wedshootsSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    }
-
-    if (scrollArrow9) {
-        scrollArrow9.addEventListener('click', () => {
-            // Scroll to top
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+    // Example: Setup scroll behavior for arrows when they're added
+    scrollArrows.forEach(arrow => {
+        const targetSection = arrow.dataset.target;
+        if (targetSection) {
+            const section = document.querySelector(targetSection);
+            if (section) {
+                arrow.addEventListener('click', () => {
+                    section.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            }
+        }
+    });
 }
 
 // ==========================================
@@ -384,8 +308,26 @@ function initAliasCopy() {
 function initRSVPToggle() {
     const toggleButton = document.getElementById('toggleFormButton');
     const formContainer = document.getElementById('formContainer');
+    const iframe = document.getElementById('rsvpIframe');
+    const loadingIndicator = document.getElementById('iframeLoading');
 
-    if (toggleButton && formContainer) {
+    if (toggleButton && formContainer && iframe) {
+        // Handle iframe load event
+        iframe.addEventListener('load', () => {
+            iframe.classList.add('loaded');
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
+        });
+
+        // Handle iframe error
+        iframe.addEventListener('error', () => {
+            if (loadingIndicator) {
+                loadingIndicator.innerHTML = '<p style="color: #d9534f;">No se pudo cargar el formulario. Por favor, intenta nuevamente más tarde.</p>';
+            }
+            console.error('Error loading RSVP form iframe');
+        });
+
         toggleButton.addEventListener('click', () => {
             const isExpanded = formContainer.classList.contains('active');
 
@@ -397,9 +339,52 @@ function initRSVPToggle() {
                 formContainer.classList.add('active');
                 toggleButton.setAttribute('aria-expanded', 'true');
                 toggleButton.textContent = 'Ocultar formulario';
+
+                // Show loading indicator when opening
+                if (loadingIndicator && !iframe.classList.contains('loaded')) {
+                    loadingIndicator.style.display = 'block';
+                }
             }
         });
+
+        // Set a timeout for iframe loading
+        setTimeout(() => {
+            if (!iframe.classList.contains('loaded') && formContainer.classList.contains('active')) {
+                if (loadingIndicator) {
+                    loadingIndicator.innerHTML = '<p>El formulario está tardando en cargar. Por favor, verifica tu conexión a internet.</p>';
+                }
+            }
+        }, 10000); // 10 seconds timeout
     }
+}
+
+// ==========================================
+// External Links Error Handling
+// ==========================================
+
+function initExternalLinksMonitoring() {
+    // Monitor external links and provide fallback messages if needed
+    const externalLinks = document.querySelectorAll('a[target="_blank"]');
+
+    externalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Check if link might be broken (optional enhancement)
+            const url = link.href;
+
+            // Add visual feedback
+            link.style.opacity = '0.7';
+            setTimeout(() => {
+                link.style.opacity = '1';
+            }, 300);
+        });
+
+        // Add rel="noopener noreferrer" for security if not present
+        if (!link.hasAttribute('rel')) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        } else if (!link.getAttribute('rel').includes('noopener')) {
+            link.setAttribute('rel', link.getAttribute('rel') + ' noopener noreferrer');
+        }
+    });
 }
 
 // ==========================================
@@ -428,6 +413,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar toggle de formulario RSVP
     initRSVPToggle();
+
+    // Inicializar monitoreo de enlaces externos
+    initExternalLinksMonitoring();
 
     // Log para verificar que el script se cargó
     console.log('Wedding website loaded successfully ♥');
