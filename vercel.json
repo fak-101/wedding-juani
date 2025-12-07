@@ -56,7 +56,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(woff2|woff|ttf|otf))",
+      "source": "/:path*.(woff2|woff|ttf|otf)",
       "headers": [
         {
           "key": "Cache-Control",
