@@ -378,6 +378,31 @@ function initAliasCopy() {
 }
 
 // ==========================================
+// Toggle RSVP Form
+// ==========================================
+
+function initRSVPToggle() {
+    const toggleButton = document.getElementById('toggleFormButton');
+    const formContainer = document.getElementById('formContainer');
+
+    if (toggleButton && formContainer) {
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = formContainer.classList.contains('active');
+
+            if (isExpanded) {
+                formContainer.classList.remove('active');
+                toggleButton.setAttribute('aria-expanded', 'false');
+                toggleButton.textContent = 'Confirmar asistencia';
+            } else {
+                formContainer.classList.add('active');
+                toggleButton.setAttribute('aria-expanded', 'true');
+                toggleButton.textContent = 'Ocultar formulario';
+            }
+        });
+    }
+}
+
+// ==========================================
 // Inicialización
 // ==========================================
 
@@ -400,6 +425,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar copia de alias
     initAliasCopy();
+
+    // Inicializar toggle de formulario RSVP
+    initRSVPToggle();
 
     // Log para verificar que el script se cargó
     console.log('Wedding website loaded successfully ♥');

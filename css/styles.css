@@ -751,7 +751,9 @@ body {
     font-size: 0.95rem;
     font-weight: 400;
     text-decoration: none;
+    border: none;
     border-radius: 8px;
+    cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(139, 148, 119, 0.3);
     margin: 0.25rem 0;
@@ -766,6 +768,33 @@ body {
 .rsvp-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 8px rgba(139, 148, 119, 0.3);
+}
+
+.rsvp-button:focus {
+    outline: 3px solid var(--color-eucalyptus-light);
+    outline-offset: 4px;
+}
+
+.rsvp-form-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    width: 100%;
+}
+
+.rsvp-form-container.active {
+    max-height: 850px;
+}
+
+.rsvp-form {
+    width: 100%;
+    max-width: 700px;
+    height: 800px;
+    border: none;
+    margin: 0.75rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(139, 148, 119, 0.2);
 }
 
 .rsvp-note {
@@ -807,7 +836,7 @@ body {
 .info-stars {
     width: 110px;
     height: auto;
-    color: var(--color-eucalyptus-dark);
+    color: rgba(250, 248, 245, 0.7);
     margin-bottom: 0.25rem;
 }
 
@@ -820,7 +849,7 @@ body {
     font-family: var(--font-cursive);
     font-size: 3rem;
     font-weight: 400;
-    color: #8B9477;
+    color: rgba(250, 248, 245, 0.7);
     line-height: 1.1;
     margin: 0;
     text-shadow: 0 2px 8px rgba(90, 122, 109, 0.1);
@@ -893,7 +922,7 @@ body {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 300;
-    color: var(--color-eucalyptus-dark);
+    color: rgba(250, 248, 245, 0.7);
     letter-spacing: 0.08em;
     margin: 0;
 }
@@ -1126,7 +1155,7 @@ body {
 .camera-icon {
     width: 70px;
     height: auto;
-    color: var(--color-white);
+    color: #8B9477;
     margin-bottom: 1rem;
 }
 
@@ -1139,7 +1168,7 @@ body {
     font-family: var(--font-sans);
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--color-white);
+    color: #8B9477;
     line-height: 1.4;
     margin: 0.25rem 0;
     letter-spacing: 0.02em;
@@ -1149,7 +1178,7 @@ body {
     font-family: var(--font-cursive);
     font-size: 4.5rem;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #8B9477;
     line-height: 1.2;
     margin: 1rem 0 2rem 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1180,7 +1209,7 @@ body {
     font-family: var(--font-sans);
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--color-white);
+    color: #8B9477;
     margin: 1rem 0 0.5rem 0;
     letter-spacing: 0.02em;
 }
@@ -1189,7 +1218,7 @@ body {
     font-family: var(--font-sans);
     font-size: 1.1rem;
     font-weight: 300;
-    color: var(--color-white);
+    color: #8B9477;
     margin: 0;
     letter-spacing: 0.05em;
 }
@@ -1542,9 +1571,12 @@ body {
         font-size: 1rem;
     }
 
-    .rsvp-button {
-        padding: 0.65rem 2rem;
-        font-size: 1rem;
+    .rsvp-form-container.active {
+        max-height: 750px;
+    }
+
+    .rsvp-form {
+        height: 700px;
     }
 
     .rsvp-note {
@@ -1794,9 +1826,12 @@ body {
         font-size: 0.95rem;
     }
 
-    .rsvp-button {
-        padding: 0.6rem 1.75rem;
-        font-size: 0.95rem;
+    .rsvp-form-container.active {
+        max-height: 650px;
+    }
+
+    .rsvp-form {
+        height: 600px;
     }
 
     .rsvp-note {

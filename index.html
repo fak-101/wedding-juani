@@ -13,6 +13,10 @@
 
     <title>J & T - ¡Nos casamos!</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,12 +240,21 @@
                 con cuidado y mucho amor.
             </p>
 
-            <!-- Botón de confirmación -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd86tut-l8mozwv-6UjAHh8M6-izyoCfo3zQSCWk9D5ftoasw/viewform"
-               target="_blank"
-               class="rsvp-button">
+            <!-- Botón para mostrar/ocultar formulario -->
+            <button class="rsvp-button" id="toggleFormButton" aria-expanded="false">
                 Confirmar asistencia
-            </a>
+            </button>
+
+            <!-- Contenedor colapsable del formulario -->
+            <div class="rsvp-form-container" id="formContainer">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd86tut-l8mozwv-6UjAHh8M6-izyoCfo3zQSCWk9D5ftoasw/viewform?embedded=true"
+                        class="rsvp-form"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0">
+                    Cargando…
+                </iframe>
+            </div>
 
             <!-- Nota final -->
             <p class="rsvp-note">
