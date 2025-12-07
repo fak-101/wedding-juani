@@ -15,114 +15,6 @@ window.addEventListener('beforeunload', () => {
 });
 
 // ==========================================
-// Audio Player
-// ==========================================
-
-class AudioPlayer {
-    constructor() {
-        this.audio = document.getElementById('weddingAudio');
-        this.playButton = document.getElementById('playButton');
-        this.isPlaying = false;
-
-        this.init();
-    }
-
-    init() {
-        if (!this.audio || !this.playButton) {
-            console.error('Audio elements not found');
-            return;
-        }
-
-        // Event listener para el botón
-        this.playButton.addEventListener('click', () => this.togglePlay());
-
-        // Event listeners para el estado del audio
-        this.audio.addEventListener('play', () => this.handlePlay());
-        this.audio.addEventListener('pause', () => this.handlePause());
-        this.audio.addEventListener('ended', () => this.handleEnded());
-
-        // Event listener para errores de carga
-        this.audio.addEventListener('error', (e) => this.handleError(e));
-    }
-
-    togglePlay() {
-        if (this.isPlaying) {
-            this.pause();
-        } else {
-            this.play();
-        }
-    }
-
-    play() {
-        const playPromise = this.audio.play();
-
-        if (playPromise !== undefined) {
-            playPromise
-                .then(() => {
-                    // Reproducción iniciada correctamente
-                    this.isPlaying = true;
-                })
-                .catch((error) => {
-                    // Manejar error de reproducción automática
-                    console.warn('Autoplay prevented:', error);
-                    this.isPlaying = false;
-                });
-        }
-    }
-
-    pause() {
-        this.audio.pause();
-        this.isPlaying = false;
-    }
-
-    handlePlay() {
-        this.isPlaying = true;
-        this.playButton.classList.add('playing');
-    }
-
-    handlePause() {
-        this.isPlaying = false;
-        this.playButton.classList.remove('playing');
-    }
-
-    handleEnded() {
-        this.isPlaying = false;
-        this.playButton.classList.remove('playing');
-        // Opcional: reiniciar el audio al principio
-        this.audio.currentTime = 0;
-    }
-
-    handleError(event) {
-        console.error('Error loading audio:', event);
-
-        // Mostrar mensaje al usuario si el archivo no existe
-        const errorType = this.audio.error.code;
-        let errorMessage = 'Error al cargar la música.';
-
-        switch(errorType) {
-            case 1:
-                errorMessage = 'Carga de audio abortada.';
-                break;
-            case 2:
-                errorMessage = 'Error de red al cargar el audio.';
-                break;
-            case 3:
-                errorMessage = 'Error al decodificar el audio.';
-                break;
-            case 4:
-                errorMessage = 'Archivo de audio no encontrado. Por favor, agrega "timeless.mp3" a la carpeta assets/.';
-                break;
-        }
-
-        console.warn(errorMessage);
-
-        // Opcional: deshabilitar el botón si hay error
-        // this.playButton.disabled = true;
-        // this.playButton.style.opacity = '0.5';
-    }
-}
-
-// ==========================================
 // Countdown Timer
 // ==========================================
 
@@ -395,9 +287,6 @@ function initExternalLinksMonitoring() {
 document.addEventListener('DOMContentLoaded', () => {
     // Forzar scroll al inicio
     window.scrollTo(0, 0);
-
-    // Inicializar reproductor de audio
-    const player = new AudioPlayer();
 
     // Inicializar contador regresivo (April 11, 2026)
     const countdown = new CountdownTimer('2026-04-11T00:00:00');

@@ -47,22 +47,6 @@
 
             <!-- Texto principal -->
             <h1 class="main-text">¡Nos casamos!</h1>
-
-            <!-- Botón de reproducción -->
-            <button class="play-button" id="playButton" aria-label="Reproducir música">
-                <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                </svg>
-                <svg class="pause-icon hidden" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="currentColor"/>
-                </svg>
-            </button>
-
-            <!-- Elemento de audio -->
-            <audio id="weddingAudio" preload="auto">
-                <source src="assets/timeless.mp3" type="audio/mpeg">
-                Tu navegador no soporta la reproducción de audio.
-            </audio>
         </div>
 
     </main>
@@ -141,24 +125,51 @@
         </div>
     </section>
 
+    <!-- Sección Ceremonia -->
+    <section class="ceremony-section">
+        <div class="ceremony-wrapper">
+            <!-- Icono de iglesia -->
+            <div class="church-icon">
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M16.77 22.48H7.23V9.11L12 5.29l4.77 3.82zm-9.54 0H1.5v-7.64l5.73-3.82zm9.54 0h5.73v-7.64l-5.73-3.82zM4.36 17.7h2.87m9.54 0h2.87'/%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M12 17.7a1 1 0 0 1 1 1v3.82h-2v-3.86a1 1 0 0 1 1-.96Z'/%3e%3ccircle cx='12' cy='11.98' r='.95' fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5'/%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M12 .52V5.3m-1.91-2.87h3.82'/%3e%3c/svg%3e" alt="Iglesia">
+            </div>
+
+            <!-- Título -->
+            <h2 class="ceremony-title">Ceremonia</h2>
+
+            <!-- Divisor -->
+            <div class="ceremony-divider"></div>
+
+            <!-- Horario -->
+            <p class="ceremony-time">18:00 hs.</p>
+
+            <!-- Nombre del lugar -->
+            <h3 class="ceremony-venue">Quinta Los Galpones</h3>
+
+            <!-- Dirección -->
+            <p class="ceremony-address">
+                Quintino Bocayuva 655,<br>
+                Benavídez, Provincia de Buenos Aires
+            </p>
+
+            <!-- Botón Ver mapa -->
+            <a href="https://www.google.com/maps/place/QUINTA+LOS+GALPONES/@-34.4152688,-58.7158177,626m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bca194ded7224b:0xaa896a03f97874f!8m2!3d-34.4152688!4d-58.7132428!16s%2Fg%2F11f57d800n?entry=tts&g_ep=EgoyMDI1MDkxMC4wIPu8ASoASAFQAw%3D%3D&skid=8b8065ed-c085-4493-a1f5-3b7a7c8d943c"
+               target="_blank"
+               class="ceremony-button">
+                Ver mapa
+            </a>
+        </div>
+    </section>
+
     <!-- Sección Lugar -->
     <section class="location-section">
         <div class="location-wrapper">
 <!-- Icono de copa -->
             <div class="champagne-icon">
-                <svg viewBox="0 0 50 80" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Copa -->
-                    <path d="M15,25 L15,15 L35,15 L35,25 Q35,35 25,40 L25,60 L30,60 L30,65 L20,65 L20,60 L25,60 L25,40 Q15,35 15,25 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <!-- Burbujas/estrellas -->
-                    <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-                    <circle cx="38" cy="10" r="1.5" fill="currentColor"/>
-                    <circle cx="18" cy="8" r="1" fill="currentColor"/>
-                    <circle cx="32" cy="6" r="1" fill="currentColor"/>
-                </svg>
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M5.32 1.5h13.36v6.68A6.68 6.68 0 0 1 12 14.86a6.68 6.68 0 0 1-6.68-6.68zm6.68 21v-7.64m4.77 7.64H7.23'/%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M5.32 7.23c6.68-2.87 6.68 2.86 13.36 0'/%3e%3c/svg%3e" alt="Copa de champagne">
             </div>
 
             <!-- Título -->
-            <h2 class="location-title">Ceremonia y Fiesta</h2>
+            <h2 class="location-title">Fiesta</h2>
 
             <!-- Divisor -->
             <div class="location-divider"></div>
@@ -195,7 +206,7 @@
         <div class="dresscode-wrapper">
 <!-- Icono de moño -->
             <div class="bow-icon">
-                <img src="elements/ChatGPT Image Dec 1, 2025, 11_22_00 PM.png" alt="Moño decorativo">
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 24 24'%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='M15.82 8.16a3.86 3.86 0 0 1-2.53 3.6 3.9 3.9 0 0 1-2.58 0 3.82 3.82 0 0 1-1.13-6.55 3.8 3.8 0 0 1 4.84 0 3.85 3.85 0 0 1 1.4 2.95Z'/%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='m14.42 5.21 3.48-3a2.8 2.8 0 0 1 1.82-.68 2.77 2.77 0 0 1 2.78 2.72v7.81a2.77 2.77 0 0 1-4.6 2.09l-3.48-3m-4.84-.04-3.48 3a2.77 2.77 0 0 1-4.6-2.09V4.25a2.77 2.77 0 0 1 2.78-2.77 2.8 2.8 0 0 1 1.82.68l3.48 3.05'/%3e%3cpath fill='none' stroke='%238B9477' stroke-miterlimit='10' stroke-width='1.5' d='m4.54 14.83-2.08 3.83h2.86l1.91 2.86 3.48-9.76m8.74 3.07 2.1 3.83h-2.87l-1.91 2.86-3.48-9.76m-8.93-3.6h3.82m7.64 0h3.82'/%3e%3c/svg%3e" alt="Icono de traje">
             </div>
 
             <!-- Título -->
@@ -261,7 +272,7 @@
                 <div class="iframe-loading" id="iframeLoading">
                     <p>Cargando formulario...</p>
                 </div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd86tut-l8mozwv-6UjAHh8M6-izyoCfo3zQSCWk9D5ftoasw/viewform?embedded=true"
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOH-SNPMj0qcNDQDrA1UWznHSfeez-_61cTp3_Ot_XyaY5lA/viewform?embedded=true"
                         class="rsvp-form"
                         id="rsvpIframe"
                         frameborder="0"
@@ -306,18 +317,7 @@
                 <!-- Botón Regalos -->
                 <div class="info-button-item">
                     <button class="info-circle-button" id="giftsButton" aria-label="Regalos">
-                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Regalo -->
-                            <rect x="15" y="25" width="30" height="25" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <rect x="12" y="20" width="36" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <line x1="30" y1="20" x2="30" y2="50" stroke="currentColor" stroke-width="2"/>
-                            <path d="M30,20 Q25,15 20,18 Q18,20 20,22 L30,20" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <path d="M30,20 Q35,15 40,18 Q42,20 40,22 L30,20" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <!-- Estrellas -->
-                            <circle cx="18" cy="15" r="1" fill="currentColor"/>
-                            <circle cx="42" cy="12" r="1" fill="currentColor"/>
-                            <circle cx="25" cy="10" r="1.5" fill="currentColor"/>
-                        </svg>
+                        <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 6v16m0-16H8.464c-.52 0-1.02-.21-1.389-.586A2.02 2.02 0 0 1 6.5 4c0-.53.207-1.04.575-1.414A1.95 1.95 0 0 1 8.465 2C11.214 2 12 6 12 6m0 0h3.536c.52 0 1.02-.21 1.389-.586A2.02 2.02 0 0 0 17.5 4c0-.53-.207-1.04-.575-1.414A1.95 1.95 0 0 0 15.535 2C12.786 2 12 6 12 6m8 5v7.8c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C18.48 22 17.92 22 16.8 22H7.2c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C4 20.48 4 19.92 4 18.8V11M2 7.6v1.8c0 .56 0 .84.109 1.054a1 1 0 0 0 .437.437C2.76 11 3.04 11 3.6 11h16.8c.56 0 .84 0 1.054-.109a1 1 0 0 0 .437-.437C22 10.24 22 9.96 22 9.4V7.6c0-.56 0-.84-.109-1.054a1 1 0 0 0-.437-.437C21.24 6 20.96 6 20.4 6H3.6c-.56 0-.84 0-1.054.109a1 1 0 0 0-.437.437C2 6.76 2 7.04 2 7.6'/%3e%3c/svg%3e" alt="Gift icon" style="width: 36px; height: 36px;">
                     </button>
                     <p class="info-button-label">REGALOS</p>
                 </div>
@@ -325,20 +325,7 @@
                 <!-- Botón Playlist -->
                 <div class="info-button-item">
                     <button class="info-circle-button" id="playlistButton" aria-label="Playlist">
-                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Notas musicales -->
-                            <circle cx="20" cy="40" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <line x1="24" y1="40" x2="24" y2="20" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="35" cy="35" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <line x1="39" y1="35" x2="39" y2="15" stroke="currentColor" stroke-width="2"/>
-                            <path d="M24,22 Q30,18 39,20" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <!-- Nota adicional -->
-                            <path d="M42,12 L44,18 L48,16" fill="currentColor"/>
-                            <!-- Estrellas -->
-                            <circle cx="15" cy="15" r="1" fill="currentColor"/>
-                            <circle cx="45" cy="10" r="1.5" fill="currentColor"/>
-                            <circle cx="50" cy="25" r="1" fill="currentColor"/>
-                        </svg>
+                        <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 18V6.355c0-.481 0-.722.088-.917a1 1 0 0 1 .358-.424c.178-.118.416-.158.891-.237l8.8-1.467c.64-.106.961-.16 1.211-.067a1 1 0 0 1 .52.44c.132.231.132.556.132 1.206V16M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0m12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/%3e%3c/svg%3e" alt="Playlist icon" style="width: 36px; height: 36px;">
                     </button>
                     <p class="info-button-label">PLAYLIST</p>
                 </div>
@@ -346,19 +333,7 @@
                 <!-- Botón Fotos -->
                 <div class="info-button-item">
                     <button class="info-circle-button" id="photosButton" aria-label="Fotos">
-                        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Cámara -->
-                            <rect x="12" y="22" width="36" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <rect x="20" y="18" width="20" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="30" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="30" cy="34" r="3" fill="currentColor"/>
-                            <circle cx="42" cy="27" r="1.5" fill="currentColor"/>
-                            <!-- Destellos -->
-                            <line x1="10" y1="15" x2="10" y2="20" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="7.5" y1="17.5" x2="12.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="48" y1="12" x2="48" y2="16" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="46" y1="14" x2="50" y2="14" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
+                        <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 8.377c0-.35 0-.525.015-.673a3 3 0 0 1 2.69-2.69C4.851 5 5.035 5 5.404 5c.143 0 .214 0 .274-.004a2 2 0 0 0 1.735-1.25c.023-.056.044-.12.086-.246.042-.127.063-.19.086-.246a2 2 0 0 1 1.735-1.25C9.38 2 9.448 2 9.58 2h4.838c.133 0 .2 0 .26.004a2 2 0 0 1 1.735 1.25c.023.056.044.12.086.246.042.127.063.19.086.246a2 2 0 0 0 1.735 1.25c.06.004.131.004.273.004.37 0 .554 0 .702.015a3 3 0 0 1 2.69 2.69c.014.147.014.322.014.672V16.2c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311C19.72 21 18.88 21 17.2 21H6.8c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311C2 18.72 2 17.88 2 16.2z'/%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 16.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8'/%3e%3c/svg%3e" alt="Camera icon" style="width: 36px; height: 36px;">
                     </button>
                     <p class="info-button-label">FOTOS</p>
                 </div>
@@ -369,6 +344,11 @@
     <!-- Sección Fondo de Emergencias -->
     <section class="emergency-fund-section">
         <div class="emergency-fund-wrapper">
+            <!-- Icono de regalo -->
+            <div class="gift-icon">
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%238B9477' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 6v16m0-16H8.464c-.52 0-1.02-.21-1.389-.586A2.02 2.02 0 0 1 6.5 4c0-.53.207-1.04.575-1.414A1.95 1.95 0 0 1 8.465 2C11.214 2 12 6 12 6m0 0h3.536c.52 0 1.02-.21 1.389-.586A2.02 2.02 0 0 0 17.5 4c0-.53-.207-1.04-.575-1.414A1.95 1.95 0 0 0 15.535 2C12.786 2 12 6 12 6m8 5v7.8c0 1.12 0 1.68-.218 2.108a2 2 0 0 1-.874.874C18.48 22 17.92 22 16.8 22H7.2c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C4 20.48 4 19.92 4 18.8V11M2 7.6v1.8c0 .56 0 .84.109 1.054a1 1 0 0 0 .437.437C2.76 11 3.04 11 3.6 11h16.8c.56 0 .84 0 1.054-.109a1 1 0 0 0 .437-.437C22 10.24 22 9.96 22 9.4V7.6c0-.56 0-.84-.109-1.054a1 1 0 0 0-.437-.437C21.24 6 20.96 6 20.4 6H3.6c-.56 0-.84 0-1.054.109a1 1 0 0 0-.437.437C2 6.76 2 7.04 2 7.6'/%3e%3c/svg%3e" alt="Icono de regalo">
+            </div>
+
 <!-- Título -->
             <h2 class="emergency-fund-title">No se puede vivir del amor,</h2>
 
@@ -399,19 +379,7 @@
         <div class="playlist-wrapper">
 <!-- Icono de música -->
             <div class="music-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Notas musicales -->
-                    <circle cx="30" cy="70" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <line x1="38" y1="70" x2="38" y2="30" stroke="currentColor" stroke-width="3"/>
-                    <circle cx="55" cy="65" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <line x1="63" y1="65" x2="63" y2="25" stroke="currentColor" stroke-width="3"/>
-                    <path d="M38,32 Q48,26 63,30" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <!-- Nota adicional -->
-                    <path d="M68,20 L72,30 L80,27" fill="currentColor"/>
-                    <!-- Estrellas -->
-                    <path d="M20,25 L21.5,29 L26,29 L22.5,32 L24,36 L20,33 L16,36 L17.5,32 L14,29 L18.5,29 Z" fill="currentColor"/>
-                    <path d="M75,15 L76,18 L79,18 L76.5,20 L77.5,23 L75,21 L72.5,23 L73.5,20 L71,18 L74,18 Z" fill="currentColor"/>
-                </svg>
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%238B9477' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 18V6.355c0-.481 0-.722.088-.917a1 1 0 0 1 .358-.424c.178-.118.416-.158.891-.237l8.8-1.467c.64-.106.961-.16 1.211-.067a1 1 0 0 1 .52.44c.132.231.132.556.132 1.206V16M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0m12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0'/%3e%3c/svg%3e" alt="Icono de música">
             </div>
 
             <!-- Título -->
@@ -451,15 +419,7 @@
         <div class="wedshoots-wrapper">
             <!-- Icono de cámara -->
             <div class="camera-icon">
-                <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="12" y="22" width="36" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <rect x="20" y="18" width="20" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="30" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="30" cy="34" r="3" fill="currentColor"/>
-                    <circle cx="42" cy="27" r="1.5" fill="currentColor"/>
-                    <line x1="25" y1="12" x2="25" y2="16" stroke="currentColor" stroke-width="1.5"/>
-                    <line x1="23" y1="14" x2="27" y2="14" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
+                <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='%238B9477' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 8.377c0-.35 0-.525.015-.673a3 3 0 0 1 2.69-2.69C4.851 5 5.035 5 5.404 5c.143 0 .214 0 .274-.004a2 2 0 0 0 1.735-1.25c.023-.056.044-.12.086-.246.042-.127.063-.19.086-.246a2 2 0 0 1 1.735-1.25C9.38 2 9.448 2 9.58 2h4.838c.133 0 .2 0 .26.004a2 2 0 0 1 1.735 1.25c.023.056.044.12.086.246.042.127.063.19.086.246a2 2 0 0 0 1.735 1.25c.06.004.131.004.273.004.37 0 .554 0 .702.015a3 3 0 0 1 2.69 2.69c.014.147.014.322.014.672V16.2c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311C19.72 21 18.88 21 17.2 21H6.8c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311C2 18.72 2 17.88 2 16.2z'/%3e%3cpath stroke='%238B9477' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 16.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8'/%3e%3c/svg%3e" alt="Icono de cámara">
             </div>
 
             <!-- Texto superior -->
