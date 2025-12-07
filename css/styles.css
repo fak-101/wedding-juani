@@ -50,10 +50,34 @@ html {
 
 body {
     font-family: var(--font-sans);
-    background: url('../elements/card-cropped.png') center center / cover no-repeat fixed;
+    background: url('../elements/background.png') center top repeat-y;
+    background-size: 100% auto;
+    background-attachment: scroll;
+    background-color: var(--color-background);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+}
+
+/* Subtle blending overlay for background seams */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 45%,
+        rgba(245, 242, 237, 0.15) 50%,
+        transparent 55%,
+        transparent 100%
+    );
+    background-size: 100% 60vh;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* ==========================================
