@@ -583,6 +583,41 @@ body::before {
     box-shadow: 0 2px 8px rgba(139, 148, 119, 0.3);
 }
 
+.ceremony-calendar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-eucalyptus-dark);
+    text-decoration: none;
+    border: 1px solid var(--color-eucalyptus-secondary);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ceremony-calendar-link .calendar-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.ceremony-calendar-link:hover {
+    background-color: var(--color-eucalyptus-light);
+    color: var(--color-white);
+    border-color: var(--color-eucalyptus-light);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(139, 148, 119, 0.25);
+}
+
+.ceremony-calendar-link:active {
+    transform: translateY(0);
+}
+
 /* ==========================================
    Location Section
    ========================================== */
@@ -691,6 +726,41 @@ body::before {
 .location-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 8px rgba(139, 148, 119, 0.3);
+}
+
+.location-calendar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-eucalyptus-dark);
+    text-decoration: none;
+    border: 1px solid var(--color-eucalyptus-secondary);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.location-calendar-link .calendar-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.location-calendar-link:hover {
+    background-color: var(--color-eucalyptus-light);
+    color: var(--color-white);
+    border-color: var(--color-eucalyptus-light);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(139, 148, 119, 0.25);
+}
+
+.location-calendar-link:active {
+    transform: translateY(0);
 }
 
 .location-note {
@@ -1425,50 +1495,38 @@ body::before {
     margin: 1rem 0;
 }
 
-.wedshoots-link {
-    display: inline-block;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-}
-
-.wedshoots-link:hover {
-    transform: translateY(-4px);
-    filter: brightness(1.1);
-}
-
-.wedshoots-link:active {
-    transform: translateY(-2px);
-}
-
-.wedshoots-logo {
-    width: 120px;
-    height: auto;
-}
-
-.wedshoots-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    text-align: left;
-}
-
-.wedshoots-download {
+.google-photos-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 2rem;
+    background-color: var(--color-eucalyptus-primary);
+    color: var(--color-white);
     font-family: var(--font-sans);
     font-size: var(--text-lg);
     font-weight: 400;
-    color: #8B9477;
-    margin: 0;
-    letter-spacing: 0.02em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(139, 148, 119, 0.3);
+    margin: 1rem 0;
 }
 
-.wedshoots-code {
-    font-family: var(--font-sans);
-    font-size: var(--text-lg);
-    font-weight: 300;
-    color: #8B9477;
-    margin: 0;
-    letter-spacing: 0.05em;
+.google-photos-button .google-photos-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+.google-photos-button:hover {
+    background-color: var(--color-eucalyptus-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 148, 119, 0.4);
+}
+
+.google-photos-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(139, 148, 119, 0.3);
 }
 
 /* ==========================================
@@ -1528,8 +1586,14 @@ body::before {
         padding: 0.7rem 2.25rem;
     }
 
-    .wedshoots-logo {
-        width: 100px;
+    .google-photos-button {
+        font-size: var(--text-base);
+        padding: 0.75rem 1.75rem;
+    }
+
+    .google-photos-button .google-photos-icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -1537,7 +1601,7 @@ body::before {
 @media (max-width: 767px) {
     :root {
         --decoration-size: 120px;
-        --logo-size: 180px;
+        --logo-size: 270px;
         --button-size: 60px;
 
         /* Responsive Typography - Mobile */
@@ -1904,16 +1968,14 @@ body::before {
         text-align: center;
     }
 
-    .wedshoots-logo {
-        width: 90px;
-    }
-
-    .wedshoots-download {
+    .google-photos-button {
         font-size: 1.05rem;
+        padding: 0.7rem 1.5rem;
     }
 
-    .wedshoots-code {
-        font-size: 0.95rem;
+    .google-photos-button .google-photos-icon {
+        width: 22px;
+        height: 22px;
     }
 
     .camera-icon {
@@ -1935,7 +1997,7 @@ body::before {
 @media (max-width: 480px) {
     :root {
         --decoration-size: 100px;
-        --logo-size: 150px;
+        --logo-size: 225px;
         --button-size: 55px;
 
         /* Responsive Typography - Small Mobile */
@@ -2205,16 +2267,14 @@ body::before {
         font-size: 2.5rem;
     }
 
-    .wedshoots-logo {
-        width: 80px;
-    }
-
-    .wedshoots-download {
+    .google-photos-button {
         font-size: 1rem;
+        padding: 0.65rem 1.25rem;
     }
 
-    .wedshoots-code {
-        font-size: 0.9rem;
+    .google-photos-button .google-photos-icon {
+        width: 20px;
+        height: 20px;
     }
 
     .camera-icon {
@@ -2392,16 +2452,14 @@ body::before {
         font-size: 5rem;
     }
 
-    .wedshoots-logo {
-        width: 140px;
-    }
-
-    .wedshoots-download {
+    .google-photos-button {
         font-size: 1.3rem;
+        padding: 1rem 2.5rem;
     }
 
-    .wedshoots-code {
-        font-size: 1.2rem;
+    .google-photos-button .google-photos-icon {
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -2437,6 +2495,7 @@ body::before {
 .ceremony-venue,
 .ceremony-address,
 .ceremony-button,
+.ceremony-calendar-link,
 .champagne-icon,
 .location-title,
 .location-divider,
@@ -2444,6 +2503,7 @@ body::before {
 .location-venue,
 .location-address,
 .location-button,
+.location-calendar-link,
 .location-note,
 .bow-icon,
 .dresscode-title,
@@ -2477,7 +2537,8 @@ body::before {
 .camera-icon,
 .wedshoots-text,
 .wedshoots-title,
-.wedshoots-info-container {
+.wedshoots-info-container,
+.google-photos-button {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
@@ -2554,6 +2615,10 @@ body::before {
     animation-delay: 0.8s;
 }
 
+.ceremony-calendar-link {
+    animation-delay: 0.9s;
+}
+
 .champagne-icon {
     animation-delay: 0.1s;
 }
@@ -2582,8 +2647,12 @@ body::before {
     animation-delay: 0.8s;
 }
 
-.location-note {
+.location-calendar-link {
     animation-delay: 0.9s;
+}
+
+.location-note {
+    animation-delay: 1s;
 }
 
 .bow-icon {
