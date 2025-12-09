@@ -288,8 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Forzar scroll al inicio
     window.scrollTo(0, 0);
 
-    // Inicializar contador regresivo (April 11, 2026)
-    const countdown = new CountdownTimer('2026-04-11T00:00:00');
+    // Inicializar contador regresivo (April 11, 2026 - 15:00 Argentina Time)
+    const countdown = new CountdownTimer('2026-04-11T15:00:00-03:00');
 
     // Inicializar flecha de scroll
     initScrollArrow();
